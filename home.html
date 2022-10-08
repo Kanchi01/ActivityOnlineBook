@@ -4,58 +4,52 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Shelf Nook</a>
+  <nav class="navbar navbar-expand-lg bg-dark text-warning" align="right">
+    <a class="navbar-brand text-light" href="home.html">Shelf Nook</a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-light" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="cart.html">Cart</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg></button>
+      </form>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Cart</a></li>
-      <li><a href="#">Log In</a></li>
-    </ul>
-    <form class="navbar-form navbar-left" action="/action_page.php">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search" name="search">
-      </div>
-      <button type="submit" class="btn btn-default">Search</button>
-    </form>
-  </div>
-</nav>
-
-<div class="container">
-  <h3>Navbar Forms</h3>
-  <p>Use the .navbar-form class to vertically align form elements (same padding as links) inside the navbar.</p>
-</div>
+  </nav>
 
 <div class="container">
   <br>
-  <table class="table table-hover table-secondary">
+  <table class="table table-hover table-secondary no-spacing" cellspacing="0">
       <tr class="table-secondary">
       </tr>
-          <td class="fw-bolder">Book Cover</td>
-          <td class="fw-bolder">Book Title</td>                
-          <td class="fw-bolder">Author</td>
-          <td class="fw-bolder">Date Published</td>
-          <td class="fw-bolder">Action</td>
+          <td class="fw-bolder" align="center">Book Cover</td>
+          <td class="fw-bolder" >Book Title</td>                
+          <td class="fw-bolder" >Author</td>
+          <td class="fw-bolder" >Date Published</td>
+          <td class="fw-bolder" >Action</td>
 
       <tr class="table-secondary">
       </tr>
-          <td><img src="img/book1 (1).jpg" class="img-thumbnail" width="50%"></td>
+          <td align="center"><img src="img/wherethe.jpg" class="img-thumbnail"></td>
           <td>Where The Crawdads Sing</td>
           <td>Delia Owens</td>                
           <td>August 14, 2018</td>
           <td>
-          <button class="btn btn-primary">Add To Cart</button>
-          <br>
-          <br>
-          <button class="btn btn-primary">Add To Wishlist</button>
+          <button class="btn btn-primary" onclick="addProduct()">Add To Cart</button>
           <br>
           <br>
           <button class="btn btn-primary">Buy Now</button>
@@ -63,15 +57,12 @@
 
       <tr class="table-secondary">
       </tr>
-          <td><img src="img/book1 (2).jpg" class="img-thumbnail" width="50%"></td>
+          <td align="center"><img src="img/ugly.jpg" class="img-thumbnail"></td>
           <td>Ugly Love</td>
           <td>Coleen Hoover</td>                
           <td>August 5, 2014</td>
           <td>
-          <button class="btn btn-primary">Add To Cart</button>
-          <br>
-          <br>
-          <button class="btn btn-primary">Add To Wishlist</button>
+          <button class="btn btn-primary" onclick="addProduct()">Add To Cart</button>
           <br>
           <br>
           <button class="btn btn-primary">Buy Now</button>
@@ -79,15 +70,12 @@
 
       <tr class="table-secondary">
       </tr>
-          <td><img src="img/3.jpg" class="img-thumbnail"></td>
+          <td align="center"><img src="img/verity.jpg" class="img-thumbnail"></td>
           <td>Verity</td>
           <td>Coleen Hoover</td>                
           <td>December 7, 2018</td>
           <td>
-          <button class="btn btn-primary">Add To Cart</button>
-          <br>
-          <br>
-          <button class="btn btn-primary">Add To Wishlist</button>
+          <button class="btn btn-primary" onclick="addProduct()">Add To Cart</button>
           <br>
           <br>
           <button class="btn btn-primary">Buy Now</button>
@@ -95,15 +83,12 @@
       
       <tr class="table-secondary">
       </tr>
-          <td><img src="img/4.jpg" class="img-thumbnail" width="50%"></td>
+          <td align="center"><img src="img/thesong.jpg" class="img-thumbnail"></td>
           <td>The Song of Achilles</td>
           <td>Madeline Miller</td>                
           <td>2011</td>
           <td>
-          <button class="btn btn-primary">Add To Cart</button>
-          <br>
-          <br>
-          <button class="btn btn-primary">Add To Wishlist</button>
+          <button class="btn btn-primary" onclick="addProduct()">Add To Cart</button>
           <br>
           <br>
           <button class="btn btn-primary">Buy Now</button>
@@ -111,15 +96,12 @@
 
       <tr class="table-secondary">
       </tr>
-          <td><img src="img/5.jpg" class="img-thumbnail" width="50%"></td>
+          <td align="center"><img src="img/booklo.jpg" class="img-thumbnail"></td>
           <td>Book Lovers</td>
           <td>Emily Henry</td>                
           <td>2022</td>
           <td>
-          <button class="btn btn-primary">Add To Cart</button>
-          <br>
-          <br>
-          <button class="btn btn-primary">Add To Wishlist</button>
+          <button class="btn btn-primary" onclick="addProduct()">Add To Cart</button>
           <br>
           <br>
           <button class="btn btn-primary">Buy Now</button>
@@ -127,5 +109,81 @@
   </table>
 </div>
 
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-light">
+
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Shelf Nook
+          </h6>
+          <p>
+            Our online bookstore offers a wide variety of books for purchase and rental. You can find new and used books. We also offer a variety of services, including book reviews, book recommendations, and book clubs.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 Copyright:
+    <a class="text-reset fw-bold" href="">Shelfnook Co.</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
 </body>
+<script src="js/bootstrap.js"></script>
+<script src="home.js"></script>
 </html>
+
+
+

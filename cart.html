@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark text-warning" align="right">
+        <a class="navbar-brand text-light" href="home.html">Shelf Nook</a>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="cart.html">Cart</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg></button>
+          </form>
+        </div>
+      </nav>
+
+  <div class="container">
+    <div class="heading">
+      <h1>
+        <span class="shopper"></span> Shopping Cart
+      </h1>
+        
+    </div>
+    
+    <div class="cart transition is-open">
+
+      
+      
+      <div class="table">
+        
+        <div class="layout-inline row th">
+          <div class="col col-pro">Product</div>
+          <div class="col col-price align-center "> 
+            Price
+          </div>
+          <div class="col col-qty align-center">QTY</div>
+          <div class="col">VAT</div>
+          <div class="col">Total</div>
+        </div>
+        
+        <div class="layout-inline row">
+          
+          <div class="col col-pro layout-inline">
+            <img src="img/booklo.jpg" alt="kitten" />
+            <p>Book Lovers</p>
+          </div>
+          
+          <div class="col col-price col-numeric align-center ">
+            <p>£59.99</p>
+          </div>
+  
+          <div class="col col-qty layout-inline">
+            <a href="#" class="qty qty-minus">-</a>
+              <input type="numeric" value="3" />
+            <a href="#" class="qty qty-plus">+</a>
+          </div>
+          
+          <div class="col col-vat col-numeric">
+            <p>£2.95</p>
+          </div>
+          <div class="col col-total col-numeric">               <p> £182.95</p>
+          </div>
+        </div>
+        
+        <div class="layout-inline row row-bg2">
+  
+          <div class="col col-pro layout-inline">
+            <img src="img/thesong.jpg" alt="kitten" />
+            <p>The Song of Achilles</p>
+          </div>
+          
+          <div class="col col-price col-numeric align-center ">
+            <p>£23.99</p>
+          </div>
+  
+          <div class="col col-qty  layout-inline">
+            <a href="#" class="qty qty-minus ">-</a>
+              <input type="numeric" value="1" />
+            <a href="#" class="qty qty-plus">+</a>
+          </div>
+          
+          <div class="col col-vat col-numeric">
+            <p>£1.95</p>
+          </div>
+          <div class="col col-total col-numeric">
+            <p>£25.94</p>
+          </div>      
+        
+        </div>
+        
+         <div class="layout-inline row">
+          
+          <div class="col col-pro layout-inline">
+            <img src="img/ugly.jpg" alt="kitten" />
+            <p>Ugly Love</p>
+          </div>
+          
+          <div class="col col-price col-numeric align-center ">
+            <p>£59.99</p>
+          </div>
+  
+          <div class="col col-qty layout-inline">
+            <a href="#" class="qty qty-minus">-</a>
+              <input type="numeric" value="3" />
+            <a href="#" class="qty qty-plus">+</a>
+          </div>
+          
+          <div class="col col-vat col-numeric">
+            <p>£2.95</p>          
+          </div>
+           <div class="col col-total col-numeric">  
+             <p>£182.95</p>
+           </div>         
+        </div>
+    
+         <div class="tf">
+           <div class="row layout-inline">
+             <div class="col">
+               <p>VAT</p>
+             </div>
+             <div class="col"></div>
+           </div>
+           <div class="row layout-inline">
+             <div class="col">
+               <p>Shipping</p>
+             </div>
+             <div class="col"></div>
+           </div>
+            <div class="row layout-inline">
+             <div class="col">
+               <p>Total</p>
+             </div>
+             <div class="col"></div>
+           </div>
+         </div>         
+    </div>
+    
+  </div>
+  
+</div>
+<br><br>
+<footer>
+
+</footer>
+  
+</body>
+<script src="js/bootstrap.js"></script>
+<script src="cart.js"></script>
+</html>
